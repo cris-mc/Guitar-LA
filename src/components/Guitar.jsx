@@ -1,17 +1,19 @@
-export default function Guitar (){
+export default function Guitar ({guitar}){
+
+    const { id, name, description, image, price} = guitar
 
     return (
-        <div class="col-md-6 col-lg-4 my-4 row align-items-center">
-                <div class="col-4">
-                    <img class="img-fluid" src="./public/img/guitarra_01.jpg" alt="imagen guitarra" />
+        <div className="col-md-6 col-lg-4 my-4 row align-items-center">
+                <div className="col-4">
+                    <img className="img-fluid" src={`./public/img/${image}.jpg`} alt="imagen guitarra" />
                 </div>
-                <div class="col-8">
-                    <h3 class="text-black fs-4 fw-bold text-uppercase">Lukather</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae labore odit magnam in autem nesciunt, amet deserunt</p>
-                    <p class="fw-black text-primary fs-3">$299</p>
+                <div className="col-8">
+                    <h3 className="text-black fs-4 fw-bold text-uppercase">{name}</h3>
+                    <p>{description}</p>
+                    <p className="fw-black text-primary fs-3">${price}</p>
                     <button 
                         type="button"
-                        class="btn btn-dark w-100"
+                        className="btn btn-dark w-100"
                     >Agregar al Carrito</button>
                 </div>
             </div>
